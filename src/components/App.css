@@ -1,0 +1,5 @@
+.app__wrapper {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
