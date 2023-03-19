@@ -2,6 +2,7 @@ import ColorPicker from './ColorPicker';
 import Form from './Form';
 import './App.css';
 import Counter from './Counter';
+import Clock from './Clock';
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -18,6 +19,7 @@ export const App = () => {
       <Form />
       <ColorPicker options={colorPickerOptions} />
       <Counter />
+      <Clock />
     </div>
   );
 };

@@ -6,13 +6,13 @@
 
 ## 2. useEffect(callback, deps)
 
-#### - в зависимости от deps(dependanties), будет зависить еффект [import {useEffect} from 'react']:
+#### - в зависимости от deps(dependanties) (масив зависимостей), будет зависить еффект [import {useEffect} from 'react']:
 
 - [] - componentDidMount
 - [value] - componentDidUpdate (обновление конткретно того что в [])
 - return {необходимый код} - componentWillUnmount
 
-###
+#### ?? лучше чем ||
 
 ###
 

@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import useLocalStorage from 'hooks/useLocalStorage';
 
 export default function SignupForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  //* 2. вот тут масив используем
+  const [email, setEmail] = useLocalStorage('email', '');
+  const [password, setPassword] = useLocalStorage('password', '');
 
   //*хорошая функция изменения State (динамическая)
   const handleChange = e => {
@@ -37,6 +38,7 @@ export default function SignupForm() {
         <label>
           Password
           <input
+            //-- type='text' для удобства, правильно  - password
             type="text"
             name="password"
             value={password}
@@ -47,3 +49,21 @@ export default function SignupForm() {
     </div>
   );
 }
+
+//* (1)
+//  const [email, setEmail] = useState(
+//    JSON.parse(window.localStorage.getItem('email')) ?? ''
+//  );
+//  const [password, setPassword] = useState(
+//    JSON.parse(window.localStorage.getItem('password')) ?? ''
+//  );
+
+// useEffect(() => {
+//     console.log('email useEffect');
+//     window.localStorage.setItem('email', JSON.stringify(email));
+//   }, [email]);
+
+//   useEffect(() => {
+//     console.log('password useEffect');
+//     window.localStorage.setItem('password', JSON.stringify(password));
+//   }, [password]);
